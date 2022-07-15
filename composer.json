@@ -1,0 +1,39 @@
+{
+    "name": "gdidentity/wp-graphql-learnpress",
+    "type": "wordpress-plugin",
+    "autoload": {
+		"files": [
+            "src/Connection/cpt-connection-args.php"
+        ],
+        "psr-4": {
+            "WPGraphQL\\Extensions\\LearnPress\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GD IDENTITY",
+            "email": "jakub.bebjak@gdidentity.sk"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "automattic/vipwpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "phpcompatibility/phpcompatibility-wp": "*"
+    },
+    "scripts": {
+        "phpcs": [
+			"php ./vendor/bin/phpcs"
+		],
+        "phpcsi": [
+			"php ./vendor/bin/phpcs -i"
+		],
+		"phpcbf": [
+			"php ./vendor/bin/phpcbf"
+		]
+    }
+}
